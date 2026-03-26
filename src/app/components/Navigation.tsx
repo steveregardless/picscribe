@@ -23,17 +23,20 @@ export function Navigation() {
             <a href="#for-agencies" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
               For Agencies
             </a>
-            <button
+            <a
+              href="app.html"
               className="px-5 py-2 text-sm text-white transition-colors"
               style={{
                 backgroundColor: 'var(--color-navy)',
                 borderRadius: 'var(--radius-sm)',
+                textDecoration: 'none',
+                display: 'inline-block',
               }}
               onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = 'var(--color-navy-dark)')}
               onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'var(--color-navy)')}
             >
               Start Free
-            </button>
+            </a>
           </div>
 
           <div className="md:hidden">
@@ -65,15 +68,18 @@ export function Navigation() {
               <a href="#for-agencies" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
                 For Agencies
               </a>
-              <button
-                className="px-5 py-2 text-sm text-white transition-colors w-full"
+              <a
+                href="app.html"
+                className="px-5 py-2 text-sm text-white transition-colors w-full text-center"
                 style={{
                   backgroundColor: 'var(--color-navy)',
                   borderRadius: 'var(--radius-sm)',
+                  textDecoration: 'none',
+                  display: 'block',
                 }}
               >
                 Start Free
-              </button>
+              </a>
             </div>
           </div>
         )}

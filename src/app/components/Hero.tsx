@@ -22,12 +22,15 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <button
-              className="px-8 py-4 text-base text-white transition-colors w-full sm:w-auto cursor-pointer"
+            <a
+              href="app.html"
+              className="px-8 py-4 text-base text-white transition-colors w-full sm:w-auto cursor-pointer text-center"
               style={{
                 backgroundColor: "var(--color-navy)",
                 borderRadius: "var(--radius-sm)",
                 fontWeight: 500,
+                textDecoration: "none",
+                display: "inline-block",
               }}
               onMouseEnter={(e) =>
                 (e.currentTarget.style.backgroundColor = "var(--color-navy-dark)")
@@ -37,7 +40,7 @@ export function Hero() {
               }
             >
               Start Free
-            </button>
+            </a>
             <a
               href="#pricing"
               className="text-base transition-colors"

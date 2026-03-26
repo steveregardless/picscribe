@@ -11,6 +11,7 @@ export function Pricing() {
         'Basic export',
       ],
       cta: 'Start Free',
+      href: 'app.html',
       highlighted: false,
     },
     {
@@ -26,6 +27,7 @@ export function Pricing() {
         'Priority email support',
       ],
       cta: 'Start Pro',
+      href: undefined,
       highlighted: true,
     },
     {
@@ -40,6 +42,7 @@ export function Pricing() {
         'Dedicated support',
       ],
       cta: 'Start Agency',
+      href: undefined,
       highlighted: false,
     },
   ];
@@ -94,28 +97,47 @@ export function Pricing() {
 
               <p className="text-sm text-gray-600 mb-6">{tier.description}</p>
 
-              <button
-                className="w-full px-6 py-3 text-base transition-colors mb-8"
-                style={{
-                  backgroundColor: tier.highlighted ? 'var(--color-navy)' : 'white',
-                  color: tier.highlighted ? 'white' : 'var(--color-navy)',
-                  border: tier.highlighted ? 'none' : '2px solid var(--color-navy)',
-                  borderRadius: 'var(--radius-sm)',
-                  fontWeight: 500,
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = tier.highlighted
-                    ? 'var(--color-navy-dark)'
-                    : 'var(--color-gray-50)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = tier.highlighted
-                    ? 'var(--color-navy)'
-                    : 'white';
-                }}
-              >
-                {tier.cta}
-              </button>
+              {tier.href ? (
+                <a
+                  href={tier.href}
+                  className="w-full px-6 py-3 text-base transition-colors mb-8 text-center block"
+                  style={{
+                    backgroundColor: 'white',
+                    color: 'var(--color-navy)',
+                    border: '2px solid var(--color-navy)',
+                    borderRadius: 'var(--radius-sm)',
+                    fontWeight: 500,
+                    textDecoration: 'none',
+                  }}
+                  onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = 'var(--color-gray-50)')}
+                  onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'white')}
+                >
+                  {tier.cta}
+                </a>
+              ) : (
+                <button
+                  className="w-full px-6 py-3 text-base transition-colors mb-8"
+                  style={{
+                    backgroundColor: tier.highlighted ? 'var(--color-navy)' : 'white',
+                    color: tier.highlighted ? 'white' : 'var(--color-navy)',
+                    border: tier.highlighted ? 'none' : '2px solid var(--color-navy)',
+                    borderRadius: 'var(--radius-sm)',
+                    fontWeight: 500,
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = tier.highlighted
+                      ? 'var(--color-navy-dark)'
+                      : 'var(--color-gray-50)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = tier.highlighted
+                      ? 'var(--color-navy)'
+                      : 'white';
+                  }}
+                >
+                  {tier.cta}
+                </button>
+              )}
 
               <ul className="space-y-3 flex-1">
                 {tier.features.map((feature, featureIndex) => (
