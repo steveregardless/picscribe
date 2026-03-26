@@ -180,18 +180,21 @@ export function Pricing() {
                   Agency plans include white-label CSV exports and priority processing. Contact us for custom enterprise solutions.
                 </p>
               </div>
-              <button
+              <a
+                href="app.html"
                 className="px-6 py-3 text-base text-white transition-colors whitespace-nowrap"
                 style={{
                   backgroundColor: 'var(--color-navy)',
                   borderRadius: 'var(--radius-sm)',
                   fontWeight: 500,
+                  textDecoration: 'none',
+                  display: 'inline-block',
                 }}
                 onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = 'var(--color-navy-dark)')}
                 onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'var(--color-navy)')}
               >
                 Get started
-              </button>
+              </a>
             </div>
           </div>
         </div>
