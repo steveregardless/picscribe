@@ -53,7 +53,7 @@ export function Hero() {
 
         <div className="mx-auto mb-24" style={{ maxWidth: "900px" }}>
           <img
-            src="hero-screenshot.png"
+            src="/hero-screenshot.png"
             alt="Picscribe app interface"
             style={{
               width: "100%",
